@@ -1,0 +1,31 @@
+POST http://localhost:3000/api/graphs/dataset
+Accept: application/json
+Content-Type: multipart/form-data; boundary=MfnBoundry
+
+--MfnBoundry
+Content-Disposition: form-data; name="file"; filename="new_data.csv"
+Content-Type: text/csv
+
+< ./new_data.csv
+--MfnBoundry--
+
+###
+
+GET http://localhost:3000/api/graphs/d1157985-f701-4789-9ee3-2d9870397843/dataset
+Accept: application/json
+
+
+###
+
+GET http://localhost:3000/api/graphs/d1157985-f701-4789-9ee3-2d9870397843/show
+Accept: application/json
+
+###
+
+GET http://localhost:3000/api/graphs/dfgdsgffds/show
+Accept: application/json
+
+###
+
+GET http://localhost:3000/api/graphs/dfgdsgffds/show
+Accept: application/json

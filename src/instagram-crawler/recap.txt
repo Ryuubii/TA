@@ -1,0 +1,7 @@
+So to organize:
+- Input a user and hashtag
+- Find all posts of the users with that hashtag
+- Find all users who commented/liked on those posts (user2)
+- Find all posts of user2 with the inputted hashtag
+- Find all the business accounts mentioned in those posts
+- Connect all the user2 with the business accounts

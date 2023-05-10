@@ -1,0 +1,27 @@
+GET http://localhost:3000/
+Accept: application/json
+
+###
+
+GET http://localhost:3000/crawler/hello
+Accept: application/json
+
+###
+
+POST http://localhost:3000/crawler/hello
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name" : "Eous"
+}
+
+###
+
+POST http://localhost:3000/crawler/post
+Accept: application/json
+Content-Type: application/json
+
+{
+    "user" : "someusername"
+}

@@ -1,0 +1,40 @@
+POST http://localhost:3000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username" : "nim",
+    "password" : "8YP.92dw@2"
+}
+
+###
+//a29b7d15-b85d-4974-bc05-f35cc4dc8102
+POST http://localhost:3000/auth/login
+Accept: application/json
+Content-Type: application/json
+X-CLIENT-ID: a29b7d15-b85d-4974-bc05-f35cc4dc8102
+
+{
+    "username" : "nim",
+    "password" : "8YP.92dw@2"
+}
+
+###
+//eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pbSIsImNsaWVudElkIjoiYTI5YjdkMTUtYjg1ZC00OTc0LWJjMDUtZjM1Y2M0ZGM4MTAyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2ODI4ODIxNjMsImV4cCI6MTY4MzQ4Njk2MywiYXVkIjoiYTI5YjdkMTUtYjg1ZC00OTc0LWJjMDUtZjM1Y2M0ZGM4MTAyIiwiaXNzIjoiUnl1dWJpaSBBUEkiLCJzdWIiOiJuaW0ifQ.ARK7O87gR2VY0-Z-dEyj-SM3e1ZTWkRS9nsbheAaq_SXPHVkq1CuXBUTgDoPd0zuNpTlNYcdDNGCV9bKubF32H9TABV_7X-ZcwX7pICKgMgA495EhuvsHyyQ6cNoZ7owPqNJLQtIIALi1uvQz0D7fXqY0Vs5PbijVA1iQ6dC6tG-yQNk
+GET http://localhost:3000/auth/verify
+Accept: application/json
+X-CLIENT-ID: a29b7d15-b85d-4974-bc05-f35cc4dc8102
+Authorization: Bearer eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pbSIsImNsaWVudElkIjoiYTI5YjdkMTUtYjg1ZC00OTc0LWJjMDUtZjM1Y2M0ZGM4MTAyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2ODI4ODIxNjMsImV4cCI6MTY4MzQ4Njk2MywiYXVkIjoiYTI5YjdkMTUtYjg1ZC00OTc0LWJjMDUtZjM1Y2M0ZGM4MTAyIiwiaXNzIjoiUnl1dWJpaSBBUEkiLCJzdWIiOiJuaW0ifQ.ARK7O87gR2VY0-Z-dEyj-SM3e1ZTWkRS9nsbheAaq_SXPHVkq1CuXBUTgDoPd0zuNpTlNYcdDNGCV9bKubF32H9TABV_7X-ZcwX7pICKgMgA495EhuvsHyyQ6cNoZ7owPqNJLQtIIALi1uvQz0D7fXqY0Vs5PbijVA1iQ6dC6tG-yQNk
+
+
+###
+// eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluaXN0cmF0b3IiLCJjbGllbnRJZCI6IjJiNjE1Mjc4LTM2OTUtNGZlNC04NzE5LTQyZWY2YTg3ZGE1NiIsImlhdCI6MTY4Mjg4NjkzMSwiZXhwIjoxNjgzNDkxNzMxLCJhdWQiOiIyYjYxNTI3OC0zNjk1LTRmZTQtODcxOS00MmVmNmE4N2RhNTYiLCJpc3MiOiJSeXV1YmlpIEFQSSIsInN1YiI6ImFkbWluaXN0cmF0b3IifQ.AOYOMmuM70mzEoEkF5WSxK8YHJTNEIuooD-W5sbGeirXEiY-RMsOuO9_Jhn43hi3GLf905HaV3dgyD-GoBYgg4PyAO4nQMfNqsgVdSSKwSDb0oC3CaQZvS5oEhe2CxT2D8lPHb5G7T_FqFvjqVlwXMY01Q2fmt6b6AWFlDUjr6uxkf_D
+POST http://localhost:3000/auth/login
+Accept: application/json
+Content-Type: application/json
+X-CLIENT-ID: 2b615278-3695-4fe4-8719-42ef6a87da56
+
+{
+    "username" : "administrator",
+    "password" : "2jeX67Pzs9%0e^cQ"
+}

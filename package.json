@@ -1,0 +1,83 @@
+{
+  "name": "ta_project",
+  "version": "1.0.0",
+  "description": "Project for TA",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "genkey": "openssl ecparam -genkey -name secp521r1 -noout -out ./.keys/signing_key",
+    "pm2": "pm2 start src/server.js --name ta_project",
+    "pm2-watch": "pm2 start src/server.js --watch --ignore-watch=\"node_modules\" && npm run pm2-logs",
+    "pm2-logs": "pm2 logs",
+    "pm2-monit": "pm2 monit",
+    "pm2-ls": "pm2 ls",
+    "pm2-stop": "pm2 stop all",
+    "pm2-delete": "pm2 delete all",
+    "pm2-sd": "npm run pm2-stop && npm run pm2-delete",
+    "create-venv": "python -m venv .venv",
+    "venv": "powershell -executionpolicy bypass -File .venv\\Scripts\\Activate.ps1",
+    "pip": "pip install -r src/instagram-crawler/python/requirements.txt",
+    "dev": "npm run venv && npm run pm2 && npm run pm2-logs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryuubii/TA_PROJECT.git"
+  },
+  "keywords": [
+    "test",
+    "project"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Ryuubii/TA_PROJECT/issues"
+  },
+  "homepage": "https://github.com/Ryuubii/TA_PROJECT#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.328.0",
+    "@aws-sdk/lib-storage": "^3.328.0",
+    "aws-sdk": "^2.1370.0",
+    "bcrypt": "^5.1.0",
+    "check-password-strength": "^2.0.7",
+    "cors": "^2.8.5",
+    "csv": "^6.2.5",
+    "cytoscape": "^3.23.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-winston": "^4.2.0",
+    "flatted": "^3.2.7",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^3.0.1",
+    "mysql2": "^2.3.3",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "pm2": "^5.3.0",
+    "puppeteer": "^19.8.0",
+    "python-shell": "^5.0.0",
+    "sequelize": "^6.27.0",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  }
+}
